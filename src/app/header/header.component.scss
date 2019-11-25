@@ -1,0 +1,34 @@
+header {
+  padding: .5em 1em;
+  background: #e2f7fa;
+}
+
+
+h1 {
+  color: #F78493;
+  animation: annimateBorder 2s infinite;
+  padding: 15px 5px;
+  display: inline-block;
+}
+
+@keyframes annimateBorder {
+  0% {
+    outline: 1px dashed #f7497d;
+  }
+  50% {
+    outline: 2px dashed #f74d5f;
+  }
+
+  100% {
+    outline: 2px dashed #f74d5f;
+  }
+}
+
+
+@media(max-width: 425px) {
+  header {
+    text-align: center;
+  }
+
+
+}

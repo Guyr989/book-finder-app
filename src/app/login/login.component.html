@@ -1,0 +1,16 @@
+<div class="box">
+    <h2>Hey, whats your name?</h2>
+    <form>
+        <div><input type="text" name="" #username>
+            <label>Your Name</label>
+        </div>
+        <input id="loginBtn"
+
+               (click)="validateUser(username)" type="submit" name=""
+               value="Submit">
+    </form>
+    <div [hidden]="validateUser(username)">
+        hello!!
+    </div>
+</div>
+
