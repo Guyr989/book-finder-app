@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -7,18 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+profileForm = this.fb.group({
+  firstName:['',[Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+  lastName:[''],
+});
 
-  constructor() {
+
+  constructor(private fb:FormBuilder) {
   }
 
-
-  ngOnInit() {
+  ngOnInit(): void {
   }
-
-
-  validateUser(username) {
-    console.log(username);
-    return username.value.length > 0;
-  }
-
 }
+
+

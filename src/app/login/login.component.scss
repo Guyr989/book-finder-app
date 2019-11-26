@@ -5,7 +5,7 @@
   transform: translate(-50%, -50%);
   max-width: 400px;
   width: 100%;
-  height: 250px;
+  height: auto;
   background: #fff;
   padding: 40px;
   box-sizing: border-box;
@@ -38,28 +38,34 @@
   border-bottom: 2px solid #999;
 }
 
-.box input[type='submit'] {
+.box button {
   border-bottom: none;
   cursor: pointer;
   color: #fff;
+  width: 100%;
+  border: 0;
   height: 50px;
   font-size: 20px;
   margin-bottom: 0;
   transition: .8s;
+  border-radius: 7px;
   text-transform: uppercase;
   background: #f78493 radial-gradient(circle, transparent 1%, #f78493 1%) center/15000%;
 }
 
-.box input[type='submit']:hover {
+
+.box button:hover {
   font-size: 30px;
   background-color: #f74d5f;
 }
 
-.box input[type='submit']:active {
+.box button:active,
+.box button:visited,
+.box button:focus {
   background-color: #f7bd5d;
   background-size: 100%;
-  transition: background 0s;
-
+  outline: 0;
+  border: 3px solid #314ef980;
 }
 
 .box form div {
@@ -95,13 +101,11 @@ div.box input:hover ~ label,
 
 
 .validLogin {
-  display: none;
+  background: #00D671;
+  color: #fff;
+  text-align: center;
 }
 
-.invalidLogin {
-  background: #c42e35;
-  color: #fff;
-}
 
 
 @media(max-width: 425px) {
