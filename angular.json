@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "e-square": {
+    "book-finder": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/e-square",
+            "outputPath": "dist/book-finder",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "e-square:build"
+            "browserTarget": "book-finder:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "e-square:build:production"
+              "browserTarget": "book-finder:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "e-square:build"
+            "browserTarget": "book-finder:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "e-square:serve"
+            "devServerTarget": "book-finder:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "e-square:serve:production"
+              "devServerTarget": "book-finder:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "e-square"
+  "defaultProject": "book-finder"
 }
