@@ -1,4 +1,4 @@
-
+.form-wrap-with-results,
 .form-wrap {
   position: absolute;
   text-align: center;
@@ -9,10 +9,15 @@
   transform: translate(-50%, -50%);
 }
 
+
+
+.form-wrap-with-results {
+  top: 0;
+}
+
 .searchForm {
   width: 100%;
   display: flex;
-
 }
 
 h2 {
@@ -20,38 +25,21 @@ h2 {
   margin-bottom: 1.5em;
 }
 
-input:focus, .search-btn:focus {
+input:focus {
   outline: 0;
   border: 2px solid #F78493;
 }
 
 input {
-  width: 70%;
+  width: 100%;
   height: 40px;
   border: 2px solid #000;
-  border-right: 0;
   cursor: text;
   padding: .2em;
   transition: background-color .3s ease-in;
   font-size: 18px;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px;
 
 }
 
-.search-btn:hover {
-  background-color: #4b57fa;
-}
-
-
-.search-btn {
-  width: 30%;
-  height: 40px;
-  border: 0;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  background: #868dfa;
-  transition: background-color .3s ease-in;
-  border-radius: 0 10px 10px 0;
-}
 
