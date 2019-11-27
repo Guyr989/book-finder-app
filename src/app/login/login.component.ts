@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { DataService } from '../data.service';
+
 
 
 @Component({
@@ -10,17 +12,33 @@ import { Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-profileForm = this.fb.group({
-  firstName:['',[Validators.required,Validators.pattern('[a-zA-Z ]*')]],
-  lastName:[''],
-});
+  profileForm: FormGroup;
+  constructor(private fb: FormBuilder,private router:Router,private data:DataService) {}
 
+  ngOnInit() {
+    this.profileForm = this.fb.group({
+      username: ['',
+        [Validators.required,
+          Validators.pattern('[a-zA-Z ]*'),
+          Validators.minLength(2),
+          Validators.maxLength(10)
+        ]
+      ],
+    });
 
-  constructor(private fb:FormBuilder) {
   }
 
-  ngOnInit(): void {
+  get username() {
+    return this.profileForm.get('username');
   }
+
+
+  send() {
+     this.data.sendMessage(this.username.value);
+     this.router.navigate(['/home'])
+  }
+
+
 }
 
 

@@ -1,1 +1,16 @@
-<p>booksearch works!</p>
+<div class="form-wrap">
+
+    <h2>Find your book</h2>
+    <form>
+        <input type="text" (keyup)="findBook(searchTerm.value)" #searchTerm placholer="find your book">
+    </form>
+
+</div>
+
+<ul>
+    <li *ngFor="let book of books.items">
+        <h4>{{book.volumeInfo.title }}</h4>
+    </li>
+</ul>
+
+<!--<app-results></app-results>-->

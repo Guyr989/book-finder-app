@@ -1,3 +1,6 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
 .box {
   position: absolute;
   top: 50%;
@@ -19,102 +22,24 @@
   color: #f7497d;
 }
 
-.box input {
-  padding: 10px 0;
-  margin-bottom: 30px;
-}
 
-
-.box input {
+mat-form-field {
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid #999;
 }
 
-.box button {
-  border-bottom: none;
-  cursor: pointer;
-  color: #fff;
-  width: 100%;
-  border: 0;
-  height: 50px;
-  font-size: 20px;
-  margin-bottom: 0;
-  transition: .8s;
-  border-radius: 7px;
-  text-transform: uppercase;
-  background: #f78493 radial-gradient(circle, transparent 1%, #f78493 1%) center/15000%;
+.flex-right-wrap {
+  display: flex;
+  justify-content: flex-end;
 }
 
 
-.box button:hover {
-  font-size: 30px;
-  background-color: #f74d5f;
-}
-
-.box button:active,
-.box button:visited,
-.box button:focus {
-  background-color: #f7bd5d;
-  background-size: 100%;
-  outline: 0;
-  border: 3px solid #314ef980;
-}
-
-.box form div {
-  position: relative;
-}
-
-.box form div label {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  color: #999;
-  transition: .5s;
-  pointer-events: none;
-}
-
-div.box input:focus ~ label,
-.box input:active ~ label,
-div.box input:hover ~ label,
-.box input:valid ~ label {
-  top: -12px;
-  left: 0;
-  color: #f7497d;
+.mat-hint {
   font-size: 12px;
-  transition: .5s;
-  font-weight: bold;
-  letter-spacing: 2px;
+  color: #ccc;
+  margin: .3em;
+
 }
 
-.box input:focus,
-.box input:valid {
-  border-bottom: 2px solid #f7497d;
-}
-
-
-.validLogin {
-  background: #00D671;
-  color: #fff;
-  text-align: center;
-}
-
-
-
-@media(max-width: 425px) {
-
-  .box {
-    width: 90%;
-    height: auto;
-    padding: 1em;
-  }
-
-
+.submit-button-wrap {
+  margin: .75em 0 0;
 }

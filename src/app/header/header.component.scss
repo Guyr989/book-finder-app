@@ -1,26 +1,42 @@
+
 header {
   padding: .5em 1em;
   background: #e2f7fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
 h1 {
   color: #F78493;
-  animation: annimateBorder 2s infinite;
+  animation: annimateBorder 2s infinite ease-out;
   padding: 15px 5px;
   display: inline-block;
 }
 
+h2 {
+  color: #F78493;
+  display: flex;
+  align-self: flex-start;
+}
+
+.user-name {
+  text-transform: capitalize;
+  margin-left: .25em;
+}
+
+
 @keyframes annimateBorder {
   0% {
-    outline: 1px dashed #f7497d;
+    outline: 2px dashed #f7497d;
   }
   50% {
-    outline: 2px dashed #f74d5f;
+    outline: 2px dashed #5a7bf7;
   }
 
   100% {
-    outline: 2px dashed #f74d5f;
+    outline: 2px dashed #f77d8c;
   }
 }
 
