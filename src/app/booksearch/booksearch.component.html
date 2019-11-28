@@ -1,17 +1,20 @@
-
-
-    <div [ngClass]="!books ? 'form-wrap' : 'form-wrap-with-results'">
-        <h2>Find your book</h2>
-        <form class="searchForm">
-            <input type="text" (keypress)="findBook(searchTerm.value)" #searchTerm placholer="find your book">
-        </form>
-        <ul>
-            <li *ngFor="let book of books.items">
-                <h4>{{book.volumeInfo.title }}</h4>
-            </li>
-        </ul>
+<div class="form-wrap">
+    <h2>Find your book</h2>
+    <form>
+        <input placeholder="Search..."
+               class="search-input"
+               [ngClass]="!books? 'search-input':'search-input-no-bottom-border'"
+               type="text"
+               (keypress)="findBook(searchTerm.value)"
+               #searchTerm>
+    </form>
+    <div *ngIf="books" class="results">
+        <div *ngFor="let book of books">
+            <h4 (click)="selcetResult(book.volumeInfo)" class="book-row">{{book.volumeInfo.title }}</h4>
+        </div>
     </div>
+</div>
 
-
-
-<!--<app-results></app-results>-->
+<div class="popup-wrap" *ngIf="selectedBook">
+    <app-book-popup [book]="selectedBook"></app-book-popup>
+</div>

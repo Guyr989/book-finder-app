@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,7 +13,8 @@ import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { GoogleBookApiService } from './google-books-api.service';
-import { ResultsComponent } from './results/results.component';
+import { BookPopupComponent } from './book-popup/book-popup.component';
+
 
 
 
@@ -27,8 +27,7 @@ import { ResultsComponent } from './results/results.component';
     BooksearchComponent,
     HeaderComponent,
     HomeComponent,
-    ResultsComponent,
-
+    BookPopupComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,7 @@ export class DataService {
 
 
   sendMessage(message: string) {
+    console.log(message);
     this.usernameSource.next(message);
   }
 }

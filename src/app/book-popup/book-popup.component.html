@@ -1,0 +1,19 @@
+<div class="book-wrap">
+    <div class="book-details">
+        <h1>{{book.title}}</h1>
+        <h4 *ngIf="book.authors"> Author(s): <span *ngFor="let author of book.authors">
+            {{author}}
+        </span></h4>
+        <p *ngIf="book.publishedDate">Published on {{book.publishedDate}}
+            <span *ngIf="book.publisher"> by '{{book.publisher}}'</span></p>
+        <p *ngIf="book.averageRating">Rating: {{book.averageRating}}</p>
+        <p *ngIf="!book.averageRating"><small>No rating is avilable</small></p>
+
+    </div>
+    <div *ngIf="book.imageLinks.thumbnail" class="book-thumbnail">
+        <a href="{{book.previewLink}}" target="_blank" class="book-image-link" >
+            <img src="{{book.imageLinks.thumbnail}}" alt="">
+            <div class="info">Click image to view more details</div>
+        </a>
+    </div>
+</div>

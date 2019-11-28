@@ -1,24 +1,49 @@
+@mixin flexCenterSpaceBetween {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
 
 header {
   padding: .5em 1em;
-  background: #e2f7fa;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexCenterSpaceBetween;
 }
 
+.user-info {
+  @include flexCenterSpaceBetween;
+}
+
+.shopping-cart {
+  width: 50px;
+  height: 50px;
+  background: #fff url("~src/assets/icon-shopping-cart.png") no-repeat center center;
+  background-size: 70%;
+  box-shadow: 2px 2px 12px #000;
+  margin-left: 15px;
+  border-radius: 100%;
+  border: 0;
+}
+
+.shopping-cart:hover:disabled{
+  background-color: #ccc;
+}
+
+.shopping-cart:hover {
+  background-color: #00A2EC;
+  cursor: pointer;
+}
 
 h1 {
   color: #F78493;
-  animation: annimateBorder 2s infinite ease-out;
+  animation: annimateColor 2s infinite ease-out;
   padding: 15px 5px;
   display: inline-block;
+  text-shadow: 2px 2px 2px #000;
 }
 
 h2 {
-  color: #F78493;
-  display: flex;
-  align-self: flex-start;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .user-name {
@@ -27,16 +52,20 @@ h2 {
 }
 
 
-@keyframes annimateBorder {
+@keyframes annimateColor {
   0% {
-    outline: 2px dashed #f7497d;
+    color: #f7497d;
   }
   50% {
-    outline: 2px dashed #5a7bf7;
+    color: #5a7bf7;
+  }
+
+  75% {
+    color: #f77d8c;
   }
 
   100% {
-    outline: 2px dashed #f77d8c;
+    color: #f72d4c;
   }
 }
 

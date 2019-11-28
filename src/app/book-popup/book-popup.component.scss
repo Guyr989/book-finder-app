@@ -1,0 +1,49 @@
+.book-wrap {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  display: flex;
+  color: #000;
+  justify-content: space-between;
+}
+
+.book-details {
+  max-width: 70%;
+}
+
+.book-details {
+  h4 {
+    margin-bottom: 25px;
+  }
+}
+
+.book-image-link{
+  position: relative;
+}
+
+.book-thumbnail {
+  min-width: 30%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: -60%;
+    padding: 0 .25em;
+    color: #fff;
+    background: dodgerblue;
+  }
+
+  img:hover ~ .info {
+    display: inline-block;
+  }
+}
+
+h2 {
+  font-size: 25px;
+}
