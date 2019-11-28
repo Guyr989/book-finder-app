@@ -9,6 +9,10 @@ header {
   @include flexCenterSpaceBetween;
 }
 
+app-shoping-cart {
+  display: inherit;
+}
+
 .user-info {
   @include flexCenterSpaceBetween;
 }
