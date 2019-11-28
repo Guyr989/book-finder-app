@@ -1,15 +1,76 @@
 .book-wrap {
   width: 100%;
   height: 100%;
+  position: relative;
   padding: 1em;
   display: flex;
   color: #000;
   justify-content: space-between;
 }
 
-.book-details {
-  max-width: 70%;
+.addToCart {
+  background: #fff;
+  font-size: 30px;
+  color: #000;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
 }
+
+.itemAddSuccessfully {
+  background: #00D671;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.addToCart:hover {
+  background: #00A2EC;
+}
+
+
+//.close-btn{
+//  position: absolute;
+//  right: -20px;
+//  top: -20px;
+//  width: 40px;
+//  height: 40px;
+//  font-size: 20px;
+//  border-radius: 100%;
+//  font-weight: bold;
+//  display: flex;
+//  border: 1px solid #000;
+//  z-index: 1;
+//  color: #fff;
+//  background: #000;
+//  align-items: center;
+//  justify-content: center;
+//
+//}
+//
+//.close-btn:hover{
+//  background: #333;
+//  cursor: pointer;
+//}
+//
+//.book-details {
+//  max-width: 70%;
+//}
 
 .book-details {
   h4 {
@@ -17,7 +78,7 @@
   }
 }
 
-.book-image-link{
+.book-image-link {
   position: relative;
 }
 
@@ -27,6 +88,8 @@
   img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
+    border: 3px solid #000;
   }
 
   .info {

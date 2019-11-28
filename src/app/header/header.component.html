@@ -2,6 +2,6 @@
     <h1>Books Finder</h1>
     <div class="user-info">
         <h2 #titleUserName *ngIf="username">Hello <span class="user-name">{{username}}</span></h2>
-        <button [disabled]="!shoppingCart" (click)="openShoppingCart()" class="shopping-cart"></button>
+    <app-shoping-cart></app-shoping-cart>
     </div>
 </header>

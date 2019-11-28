@@ -1,0 +1,19 @@
+.shopping-cart {
+  width: 30px;
+  height: 30px;
+  background: #fff url("~src/assets/icon-shopping-cart.png") no-repeat center center;
+  background-size: 65%;
+  box-shadow: 2px 2px 12px #000;
+  margin-left: 15px;
+  border-radius: 100%;
+  border: 0;
+}
+
+.shopping-cart:hover:disabled{
+  background-color: #ccc;
+}
+
+.shopping-cart:hover {
+  background-color: #00A2EC;
+  cursor: pointer;
+}

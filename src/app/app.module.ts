@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { GoogleBookApiService } from './google-books-api.service';
 import { BookPopupComponent } from './book-popup/book-popup.component';
+import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
 
 
 
@@ -28,6 +29,7 @@ import { BookPopupComponent } from './book-popup/book-popup.component';
     HeaderComponent,
     HomeComponent,
     BookPopupComponent,
+    ShopingCartComponent,
   ],
   imports: [
     BrowserModule,

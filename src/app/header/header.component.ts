@@ -28,14 +28,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   username: string;
-  shopingCart: Object;
 
-  openShoppingCart() {
-    if (!this.shopingCart) {
-      console.log('empty');
-    }
-    return null;
-  }
 
   getMessage() {
     this.data.userNameMessage$.subscribe(data => {

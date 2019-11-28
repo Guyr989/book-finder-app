@@ -12,10 +12,22 @@ export class BookPopupComponent implements OnInit {
   }
 
   @Input() book: Book;
-
+  cart: Book[] = [];
+  itemAdd: boolean = false;
 
   ngOnInit() {
-    console.log(this.book);
+
   }
+
+  addToCart(book) {
+    this.cart.push(book);
+    this.itemAdd = true;
+    let itemAddedInt = setInterval(() => {
+      clearInterval(itemAddedInt);
+      this.itemAdd = false;
+    }, 3500);
+
+  }
+
 
 }
