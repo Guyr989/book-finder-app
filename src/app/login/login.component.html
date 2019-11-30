@@ -1,0 +1,27 @@
+<div class="box">
+    <h2>Hey, whats your name?</h2>
+    <form [formGroup]="profileForm">
+        <mat-hint class="flex-right-wrap">
+            {{username.value.length}} / 10
+        </mat-hint>
+        <mat-form-field>
+            <input matInput placeholder="Fill It Here" formControlName="username">
+            <mat-error *ngIf="username.touched && username.pristine">
+                Please enter your name
+            </mat-error>
+            <mat-error *ngIf="username.errors?.pattern">
+                {{username.value}}, your name is BEAUTIFUL but only A-Z characters are Accepted
+            </mat-error>
+            <mat-hint *ngIf="username.invalid && username.touched && username.value.length === 1">
+                Must be more than 1 character
+            </mat-hint>
+            <mat-hint *ngIf="username.invalid && username.touched && username.value.length >= 10">
+                Must be less than 10 character
+            </mat-hint>
+        </mat-form-field>
+        <div class="flex-right-wrap submit-button-wrap">
+            <button [disabled]="!username.valid" (click)="send()" color="primary" mat-stroked-button>Continue</button>
+        </div>
+    </form>
+</div>
+

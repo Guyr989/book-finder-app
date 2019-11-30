@@ -1,0 +1,64 @@
+@mixin flexCenterSpaceBetween {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  padding: .5em 1em;
+  @include flexCenterSpaceBetween;
+}
+
+app-shoping-cart {
+  display: inherit;
+}
+
+.user-info {
+  @include flexCenterSpaceBetween;
+}
+
+
+h1 {
+  color: #F78493;
+  animation: annimateColor 2s infinite ease-out;
+  padding: 15px 5px;
+  display: inline-block;
+  text-shadow: 2px 2px 2px #000;
+}
+
+h2 {
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.user-name {
+  text-transform: capitalize;
+  margin-left: .25em;
+}
+
+
+@keyframes annimateColor {
+  0% {
+    color: #f7497d;
+  }
+  50% {
+    color: #5a7bf7;
+  }
+
+  75% {
+    color: #f77d8c;
+  }
+
+  100% {
+    color: #f72d4c;
+  }
+}
+
+
+@media(max-width: 425px) {
+  header {
+    text-align: center;
+  }
+
+
+}
