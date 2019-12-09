@@ -29,9 +29,10 @@
 }
 
 .itemAddSuccessfully {
-  background: #00D671;
+  background: #4cd617;
   color: #fff;
   text-align: center;
+  border-radius: 15px 15px 0 0;
   width: 100%;
   text-transform: uppercase;
   position: absolute;
@@ -44,35 +45,8 @@
 }
 
 
-//.close-btn{
-//  position: absolute;
-//  right: -20px;
-//  top: -20px;
-//  width: 40px;
-//  height: 40px;
-//  font-size: 20px;
-//  border-radius: 100%;
-//  font-weight: bold;
-//  display: flex;
-//  border: 1px solid #000;
-//  z-index: 1;
-//  color: #fff;
-//  background: #000;
-//  align-items: center;
-//  justify-content: center;
-//
-//}
-//
-//.close-btn:hover{
-//  background: #333;
-//  cursor: pointer;
-//}
-//
-//.book-details {
-//  max-width: 70%;
-//}
-
 .book-details {
+  h1,
   h4 {
     margin-bottom: 25px;
   }
@@ -109,4 +83,24 @@
 
 h2 {
   font-size: 25px;
+}
+
+
+@media(max-width: 768px) {
+  .book-details {
+    h1 {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+  }
+  .itemAddSuccessfully {
+    font-size: .9em;
+    padding: .5em;
+    line-height: 1.2;
+  }
+
+
+  .addToCart{
+    right: 10px;
+  }
 }

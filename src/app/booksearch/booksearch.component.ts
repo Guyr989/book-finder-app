@@ -32,4 +32,10 @@ export class BooksearchComponent {
     this.searchTerm.nativeElement.value = result.title;
     this.books = '';
   }
+
+  closePopup($event) {
+    if (this.selectedBook && $event.target.className === 'popup-wrap ng-star-inserted') {
+      this.selectedBook = null;
+    }
+  }
 }

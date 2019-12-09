@@ -17,8 +17,8 @@
         </div>
     </div>
 
-    <div  class="popup-wrap"  *ngIf="selectedBook">
-        <app-book-popup  [book]="selectedBook"></app-book-popup>
+    <div  class="popup-wrap" (click)="closePopup($event)" *ngIf="selectedBook">
+        <app-book-popup [book]="selectedBook"></app-book-popup>
     </div>
 
 </div>

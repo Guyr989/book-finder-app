@@ -40,7 +40,7 @@ app-book-popup {
   left: 50%;
   width: 100%;
   z-index: 999;
-  height: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
   border-radius: 15px;
@@ -49,21 +49,19 @@ app-book-popup {
   box-shadow: 5px 5px 15px #2d2727;
   max-height: 700px;
   transform: translate(-50%, -50%);
-  -webkit-animation: 0.5s annimateWidthHieght;
-  animation: 0.5s annimateWidthHieght;
+  -webkit-animation: 0.1s fadein;
+  animation: 0.5s fadein;
   background: #f2ebe9;
   background-size: 100% 100%;
 
 }
 
-@keyframes annimateWidthHieght {
+@keyframes fadein {
   from {
-    width: 0;
-    height: 0;
+    opacity: 0;
   }
   to {
-    width: 100%;
-    height: auto;
+    opacity: 1;
   }
 }
 

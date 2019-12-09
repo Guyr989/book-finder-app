@@ -1,4 +1,4 @@
-import { DataService } from './../data.service';
+import { DataService } from '../data.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Book } from '../book.model';
 
@@ -9,7 +9,7 @@ import { Book } from '../book.model';
 })
 export class BookPopupComponent implements OnInit {
 
-  constructor(private data:DataService) {
+  constructor(private data: DataService) {
   }
 
   @Input() book: Book;
@@ -20,15 +20,18 @@ export class BookPopupComponent implements OnInit {
 
   }
 
-  addToCart(book:Book) {
+  addToCart(book: Book) {
     this.data.addToCart(book);
+    this.closeSuccessPopup();
+
+  }
+
+  closeSuccessPopup() {
     this.itemAdd = true;
     let itemAddedInt = setInterval(() => {
       clearInterval(itemAddedInt);
       this.itemAdd = false;
     }, 3500);
-
   }
-
 
 }

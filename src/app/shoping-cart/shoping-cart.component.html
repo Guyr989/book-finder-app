@@ -1,3 +1,14 @@
-<button #shoppingCart [disabled]="shoppingCart" class="shopping-cart"></button>
-<h1>items: {{numberOfCartItems}}</h1>
-
+<div (click)="openShoppingCart()" class="shopping-cart-wrap">
+    <button class="shopping-cart"></button>
+    <div *ngIf="cartItems" class="numberOfCartItems"> {{cartItems.length || 0}}</div>
+</div>
+<div class="cart-wrap" *ngIf="isOpen">
+    <div class="closeCart" (click)="closeCart()">X</div>
+    <div class="cart-inner">
+        <h4>{{message}}</h4>
+        <div class="cart-items" *ngFor="let item of cartItems">
+            <span>{{item.title}}</span>
+            <button class="btn btn-danger" (click)="removeFromCart(item)">remove</button>
+        </div>
+    </div>
+</div>

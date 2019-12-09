@@ -21,5 +21,7 @@
 
     <div (click)="addToCart(book)" class="addToCart">+</div>
 
-    <div *ngIf="itemAdd" class="itemAddSuccessfully">Item added successfully</div>
+    <div *ngIf="itemAdd" class="itemAddSuccessfully"> <u>'{{book.title}}'</u>
+        <div>**was added to shopping cart**</div>
+    </div>
 </div>

@@ -6,24 +6,29 @@ import { Book } from './book.model';
   providedIn: 'root'
 })
 export class DataService {
+
   cart: Book[] = [];
-  
+
   constructor() {
   }
 
 
   private usernameSource = new Subject<string>();
   userNameMessage$ = this.usernameSource.asObservable();
- 
-
+  cartItem = new Subject();
 
   sendMessage(message: string) {
     this.usernameSource.next(message);
   }
 
 
-addToCart(book:Book){
-  this.cart.push(book);
-}
+  updateCartItems() {
+    return this.cartItem.next(this.cart);
+  }
+
+  addToCart(book: Book) {
+    this.cart.push(book);
+    this.updateCartItems();
+  }
 
 }
